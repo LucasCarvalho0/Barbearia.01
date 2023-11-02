@@ -1,0 +1,81 @@
+header{
+    width: 100%;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+i{
+    color: $white-normal;
+}
+
+.header-icones{
+    display: flex;
+    gap: 14px;
+    margin: 50px;
+}
+
+.header-icones a:hover{
+    i{
+        animation: translateY 0.8s infinite alternate;
+        color: $white-normal;
+    }
+}
+
+.fa-brands fa-facebook fa-2x a:hover {
+    i{
+        animation: translateY 0.8s infinite alternate;
+        color: $red-normal;
+    }
+}
+
+@keyframes translateY{
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to{
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+.header-button{
+    border: 1px solid $white-normal;
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: $white-normal;
+    background-color: transparent;
+    transition: background-color 0.1s;
+}
+
+.header-button:hover{
+    border: 1px solid $red-linght;
+    background-color: $red-linght;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 768px){
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+     }
+    .header-logo img{
+        width: 160px;
+        margin-top: 47px;
+    }
+
+    .header-button{
+        display: none;
+    }
+}
